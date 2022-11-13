@@ -13,7 +13,7 @@ object ApiClient {
     private var retrofit: Retrofit? = null
 
     @OptIn(ExperimentalSerializationApi::class)
-    fun getRetrofit() {
+    fun getRetrofit(): Retrofit {
         if (retrofit == null) {
             val logger = HttpLoggingInterceptor().apply {
                 level = HttpLoggingInterceptor.Level.BASIC
@@ -27,5 +27,6 @@ object ApiClient {
                 .addConverterFactory(Json.asConverterFactory("application/json".toMediaType()))
                 .build()
         }
+        return retrofit!!
     }
 }
