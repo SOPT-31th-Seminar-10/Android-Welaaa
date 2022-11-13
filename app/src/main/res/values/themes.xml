@@ -13,4 +13,35 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <!-- Welaaa TextAppearance -->
+    <style name="TextAppearance.Welaaa.System1" parent="">
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">@font/pretendard_semibold</item>
+    </style>
+
+    <style name="TextAppearance.Welaaa.System2" parent="">
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/pretendard_medium</item>
+    </style>
+
+    <style name="TextAppearance.Welaaa.System3" parent="">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/pretendard_regular</item>
+    </style>
+
+    <style name="TextAppearance.Welaaa.System3.Title" parent="">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/pretendard_semibold</item>
+    </style>
+
+    <style name="TextAppearance.Welaaa.System4.Regular" parent="">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/pretendard_regular</item>
+    </style>
+
+    <style name="TextAppearance.Welaaa.System4.Medium" parent="">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/pretendard_medium</item>
+    </style>
 </resources>
