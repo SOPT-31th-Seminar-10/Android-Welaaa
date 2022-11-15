@@ -12,14 +12,106 @@
         android:layout_height="match_parent"
         tools:context=".presentation.MainActivity">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Hello World!"
-            app:layout_constraintBottom_toBottomOf="parent"
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fcv_main"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/bnv_main"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            app:layout_constraintBottom_toTopOf="@id/bnv_main"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <SeekBar
+                android:id="@+id/sb_mini_player_main"
+                android:layout_width="0dp"
+                android:layout_height="4dp"
+                android:max="100000"
+                android:paddingStart="0dp"
+                android:paddingEnd="0dp"
+                android:progress="40000"
+                android:progressBackgroundTint="@color/welaaa_grey_300"
+                android:progressTint="@color/welaaa_logo_green"
+                android:thumb="@null"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_mini_player_main"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/background_mini_player"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_mini_player_title_main"
+                style="@style/TextAppearance.Welaaa.System3.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="-3dp"
+                android:text="@string/mini_player_example_title"
+                android:textColor="@color/welaaa_grey_800"
+                app:layout_constraintStart_toEndOf="@id/iv_mini_player_main"
+                app:layout_constraintTop_toTopOf="@id/iv_mini_player_main" />
+
+            <TextView
+                android:id="@+id/tv_mini_player_subtitle_main"
+                style="@style/TextAppearance.Welaaa.System4.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="@string/mini_player_subtitle_example"
+                android:textColor="@color/welaaa_grey_600"
+                app:layout_constraintBottom_toBottomOf="@id/iv_mini_player_main"
+                app:layout_constraintStart_toStartOf="@id/tv_mini_player_title_main"
+                app:layout_constraintTop_toBottomOf="@id/tv_mini_player_title_main" />
+
+            <ImageView
+                android:id="@+id/iv_mini_player_replay_main"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/ic_book_replay"
+                app:layout_constraintBottom_toBottomOf="@id/iv_mini_player_play_main"
+                app:layout_constraintEnd_toStartOf="@id/iv_mini_player_play_main"
+                app:layout_constraintTop_toTopOf="@id/iv_mini_player_play_main" />
+
+            <ImageView
+                android:id="@+id/iv_mini_player_play_main"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/ic_book_play"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bnv_main"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:itemIconTint="@color/welaaa_logo_green"
+            app:itemTextColor="@drawable/selector_text_color_menu"
+            app:labelVisibilityMode="labeled"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:menu="@menu/bottom_navigation_menu" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

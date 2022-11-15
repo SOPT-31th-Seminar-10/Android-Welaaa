@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Welaaa</string>
+    <string name="home">홈</string>
+    <string name="search">탐색</string>
+    <string name="shelf">내 서랍</string>
+    <string name="setting">관리</string>
+    <string name="mini_player_example_title">2</string>
+    <string name="mini_player_subtitle_example">파친코1</string>
 </resources>
