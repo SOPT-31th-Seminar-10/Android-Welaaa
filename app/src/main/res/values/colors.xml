@@ -17,4 +17,10 @@
     <color name="welaaa_grey_800">#444444</color>
     <color name="welaaa_grey_900">#111111</color>
     <color name="welaaa_logo_green">#01C73C</color>
+
+    <!-- Home Color -->
+    <color name="homoe_green">#2A4C4F</color>
+    <color name="homoe_pink">#D09694</color>
+
+
 </resources>
