@@ -26,7 +26,7 @@ class MainActivity : BindingActivity<ActivityMainBinding>(R.layout.activity_main
         }
     }
 
-    private fun startTargetFragment(itemId: Int): Any = when (itemId) {
+     private fun startTargetFragment(itemId: Int): Any = when (itemId) {
         R.id.menu_home -> replace<HomeFragment>(R.id.fcv_main)
         R.id.menu_search -> replace<SearchFragment>(R.id.fcv_main)
         R.id.menu_shelf -> replace<ShelfFragment>(R.id.fcv_main)

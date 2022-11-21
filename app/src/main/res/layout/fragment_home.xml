@@ -6,6 +6,9 @@
 
     <data>
 
+        <variable
+            name="homeBook"
+            type="com.sopt.welaaa.data.model.ResponseBookDto.Data" />
     </data>
 
     <!--            <com.google.android.material.tabs.TabLayout-->
@@ -25,208 +28,226 @@
 
     <!--            </com.google.android.material.tabs.TabLayout>-->
 
-    <ScrollView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:context=".presentation.home.view.HomeFragment">
 
-        <LinearLayout
+
+        <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="-195dp">
 
-            <!--메인배너-->
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/layout_constraint_1"
-                android:layout_width="match_parent"
-                android:layout_height="260dp"
-                android:background="@color/homoe_green"
-                android:paddingHorizontal="20dp"
-                android:paddingTop="27dp">
-
-                <TextView
-                    android:id="@+id/tv_home_pick"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-
-                    android:text="윌라's PICK"
-                    android:textColor="@color/white"
-                    android:textSize="16sp"
-                    app:layout_constraintStart_toStartOf="@id/layout_constraint_1"
-                    app:layout_constraintTop_toTopOf="@id/layout_constraint_1" />
-
-                <TextView
-                    android:id="@+id/tv_home_main"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="28dp"
-                    android:text="자비로운 신은\n왜 인간에게\n고통을 주는가?"
-                    android:textColor="@color/white"
-                    android:textSize="20sp"
-                    app:layout_constraintStart_toStartOf="@id/layout_constraint_1"
-                    app:layout_constraintTop_toBottomOf="@id/tv_home_pick" />
-
-                <TextView
-                    android:id="@+id/tv_home_sub"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="24dp"
-                    android:text="신과 인간에 대한 고뇌와 탐구\n이문열 인생 역작을 듣다"
-                    android:textColor="@color/white"
-                    android:textSize="12sp"
-                    app:layout_constraintStart_toStartOf="@id/layout_constraint_1"
-                    app:layout_constraintTop_toBottomOf="@id/tv_home_main" />
-
-                <ImageView
-                    android:id="@+id/iv_home_main"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/home_banner_main"
-                    app:layout_constraintEnd_toEndOf="@id/layout_constraint_1"
-                    app:layout_constraintTop_toTopOf="@id/tv_home_pick"
-
-
-                    />
-
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/layout_constraint_2"
-                android:layout_width="match_parent"
-                android:layout_height="70.89dp"
-                android:layout_marginHorizontal="20dp"
-                android:layout_marginTop="24dp"
-                android:background="@color/homoe_pink">
-
-                <TextView
-                    android:id="@+id/tv_title_sub"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="13.96dp"
-                    android:layout_marginTop="12dp"
-                    android:text="제 남편은 결코 사람을 죽이지 않았어요"
-                    android:textColor="@color/white"
-                    android:textSize="14sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/tv_sub_sub"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:text="K-스릴러 <붉은 열대어>"
-                    android:textColor="@color/white"
-                    android:textSize="12sp"
-                    app:layout_constraintStart_toStartOf="@id/tv_title_sub"
-                    app:layout_constraintTop_toBottomOf="@id/tv_title_sub" />
-
-                <ImageView
-                    android:id="@+id/iv_home_sub"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="14.95dp"
-                    android:src="@drawable/home_banner_sub"
-                    app:layout_constraintBottom_toBottomOf="@id/layout_constraint_2"
-                    app:layout_constraintEnd_toEndOf="@id/layout_constraint_2" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/layout_constraint_3"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="54.11dp">
+                android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/tv_rcyler_1"
-                    android:layout_width="wrap_content"
+                <!--메인배너-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_constraint_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="260dp"
+                    android:background="@color/home_green"
+                    android:paddingHorizontal="20dp"
+                    android:paddingTop="27dp">
+
+                    <TextView
+                        android:id="@+id/tv_home_pick"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/s_pick"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="@id/layout_constraint_1"
+                        app:layout_constraintTop_toTopOf="@id/layout_constraint_1" />
+
+                    <TextView
+                        android:id="@+id/tv_home_main"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="28dp"
+                        android:text="@string/n_n"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toStartOf="@id/layout_constraint_1"
+                        app:layout_constraintTop_toBottomOf="@id/tv_home_pick" />
+
+                    <TextView
+                        android:id="@+id/tv_home_sub"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:text="@string/n"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="@id/layout_constraint_1"
+                        app:layout_constraintTop_toBottomOf="@id/tv_home_main" />
+
+                    <ImageView
+                        android:id="@+id/iv_home_main"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/bookimage"
+                        android:elevation="4dp"
+                        android:src="@drawable/home_banner_main"
+                        app:layout_constraintEnd_toEndOf="@id/layout_constraint_1"
+
+
+                        app:layout_constraintTop_toTopOf="@id/tv_home_pick" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_constraint_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="70.89dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="24dp"
+                    android:background="@drawable/top_radius_background">
+
+                    <TextView
+                        android:id="@+id/tv_title_sub"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="13.96dp"
+                        android:layout_marginTop="12dp"
+                        android:text="@string/dddd"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_sub_sub"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="@string/k"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="@id/tv_title_sub"
+                        app:layout_constraintTop_toBottomOf="@id/tv_title_sub" />
+
+                    <ImageView
+                        android:id="@+id/iv_home_sub"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="14.95dp"
+                        android:contentDescription="@string/bookimage"
+                        android:src="@drawable/home_banner_sub"
+                        app:layout_constraintBottom_toBottomOf="@id/layout_constraint_2"
+                        app:layout_constraintEnd_toEndOf="@id/layout_constraint_2" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_constraint_3"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="듣고 있던 오디오북! 계속 들어볼까요?"
-                    android:textSize="20sp"
-                    app:layout_constraintStart_toStartOf="@id/layout_constraint_3"
-                    app:layout_constraintTop_toTopOf="@id/layout_constraint_3" />
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="54.11dp">
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recyclerView_1"
-                    android:layout_width="match_parent"
-                    android:layout_height="149dp"
-                    android:orientation="horizontal"
-                    app:layout_constraintStart_toStartOf="@id/layout_constraint_3"
-                    app:layout_constraintTop_toBottomOf="@id/tv_rcyler_1" />
+                    <TextView
+                        android:id="@+id/tv_rcyler_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sss"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toStartOf="@id/layout_constraint_3"
+                        app:layout_constraintTop_toTopOf="@id/layout_constraint_3" />
 
+                    <androidx.recyclerview.widget.RecyclerView
 
-                <TextView
-                    android:id="@+id/tv_rcyler_2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="56dp"
-                    android:text="반유진님이 좋아할 만한 오디오북"
-                    android:textSize="20sp"
-                    app:layout_constraintStart_toStartOf="@id/layout_constraint_3"
-                    app:layout_constraintTop_toBottomOf="@id/recyclerView_1" />
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recyclerView_2"
-                    android:layout_width="match_parent"
-                    android:layout_height="149dp"
-                    android:layout_marginTop="16dp"
-                    app:layout_constraintStart_toStartOf="@id/layout_constraint_3"
-                    app:layout_constraintTop_toBottomOf="@id/tv_rcyler_2" />
+                        android:id="@+id/recyclerView_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:orientation="horizontal"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        app:layout_constraintStart_toStartOf="@id/layout_constraint_3"
+                        app:layout_constraintTop_toBottomOf="@id/tv_rcyler_1"
+                        tools:listitem="@layout/item_rcyler_1" />
 
 
-                <TextView
-                    android:id="@+id/tv_rcyler_3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="56dp"
-                    android:text="이 달의 오디오북"
-                    android:textSize="20sp"
-                    app:layout_constraintStart_toStartOf="@id/layout_constraint_3"
-                    app:layout_constraintTop_toBottomOf="@id/recyclerView_2" />
+                    <TextView
+                        android:id="@+id/tv_rcyler_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="56dp"
+                        android:text="반유진님이 좋아할 만한 오디오북"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toStartOf="@id/layout_constraint_3"
+                        app:layout_constraintTop_toBottomOf="@id/recyclerView_1" />
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recyclerView_3"
-                    android:layout_width="match_parent"
-                    android:layout_height="149dp"
-                    android:layout_marginTop="16dp"
-                    app:layout_constraintStart_toStartOf="@id/layout_constraint_3"
-                    app:layout_constraintTop_toBottomOf="@id/tv_rcyler_3" />
-
-                <TextView
-                    android:id="@+id/tv_rcyler_4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="56dp"
-                    android:text="지금 막 녹음을 끝낸 오디오북"
-                    android:textSize="20sp"
-                    app:layout_constraintStart_toStartOf="@id/layout_constraint_3"
-                    app:layout_constraintTop_toBottomOf="@id/recyclerView_3" />
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recyclerView_4"
-                    android:layout_width="match_parent"
-                    android:layout_height="149dp"
-                    android:layout_marginTop="16dp"
-                    app:layout_constraintStart_toStartOf="@id/layout_constraint_3"
-                    app:layout_constraintTop_toBottomOf="@id/tv_rcyler_4" />
+                    <androidx.recyclerview.widget.RecyclerView
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        android:orientation="horizontal"
+                        android:id="@+id/recyclerView_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        app:layout_constraintStart_toStartOf="@id/layout_constraint_3"
+                        app:layout_constraintTop_toBottomOf="@id/tv_rcyler_2"
+                        tools:listitem="@layout/item_rcyler_2" />
 
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recyclerView_5"
-                    android:layout_width="match_parent"
-                    android:layout_height="149dp"
-                    android:layout_marginTop="56dp"
-                    app:layout_constraintStart_toStartOf="@id/layout_constraint_3"
-                    app:layout_constraintTop_toBottomOf="@id/recyclerView_4" />
+                    <TextView
+                        android:id="@+id/tv_rcyler_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="56dp"
+                        android:text="이 달의 오디오북"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toStartOf="@id/layout_constraint_3"
+                        app:layout_constraintTop_toBottomOf="@id/recyclerView_2" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        android:orientation="horizontal"
+                        android:id="@+id/recyclerView_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        app:layout_constraintStart_toStartOf="@id/layout_constraint_3"
+                        app:layout_constraintTop_toBottomOf="@id/tv_rcyler_3"
+                        tools:listitem="@layout/item_rcyler_3"/>
+
+                    <!--                <TextView-->
+                    <!--                    android:id="@+id/tv_rcyler_4"-->
+                    <!--                    android:layout_width="wrap_content"-->
+                    <!--                    android:layout_height="wrap_content"-->
+                    <!--                    android:layout_marginTop="56dp"-->
+                    <!--                    android:text="지금 막 녹음을 끝낸 오디오북"-->
+                    <!--                    android:textSize="20sp"-->
+                    <!--                    app:layout_constraintStart_toStartOf="@id/layout_constraint_3"-->
+                    <!--                    app:layout_constraintTop_toBottomOf="@id/recyclerView_3" />-->
+
+                    <!--                <androidx.recyclerview.widget.RecyclerView-->
+                    <!--                    android:id="@+id/recyclerView_4"-->
+                    <!--                    android:layout_width="match_parent"-->
+                    <!--                    android:layout_height="149dp"-->
+                    <!--                    android:layout_marginTop="16dp"-->
+                    <!--                    app:layout_constraintStart_toStartOf="@id/layout_constraint_3"-->
+                    <!--                    app:layout_constraintTop_toBottomOf="@id/tv_rcyler_4" />-->
 
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                    <!--                <androidx.recyclerview.widget.RecyclerView-->
+                    <!--                    android:id="@+id/recyclerView_5"-->
+                    <!--                    android:layout_width="match_parent"-->
+                    <!--                    android:layout_height="149dp"-->
+                    <!--                    android:layout_marginTop="56dp"-->
+                    <!--                    app:layout_constraintStart_toStartOf="@id/layout_constraint_3"-->
+                    <!--                    app:layout_constraintTop_toBottomOf="@id/recyclerView_4" />-->
 
 
-        </LinearLayout>
-
-    </ScrollView>
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
 
+            </LinearLayout>
+
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

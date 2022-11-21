@@ -15,8 +15,8 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:context=".presentation.home.view.HomeFragment"
-        android:paddingEnd="10dp">
+        android:paddingEnd="10dp"
+        tools:context=".presentation.home.view.HomeFragment">
 
 
         <ImageView
@@ -29,26 +29,27 @@
             tools:src="@drawable/home_book" />
 
         <TextView
-            android:layout_marginTop="8dp"
             android:id="@+id/tv_book_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:text="@{homeBook.title}"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/thumbnailImage"
-            tools:text="가나다"/>
+            tools:text="가나다" />
 
         <TextView
-            android:layout_marginTop="8dp"
             android:id="@+id/tv_book_author"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:text="@{homeBook.author}"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_book_title"
-            tools:text="라마바"/>
+            tools:text="라마바" />
+
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

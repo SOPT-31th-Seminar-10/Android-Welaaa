@@ -13,15 +13,18 @@
         tools:context=".presentation.MainActivity">
 
         <androidx.fragment.app.FragmentContainerView
+            android:name="com.sopt.welaaa.presentation.home.view.HomeFragment"
             android:id="@+id/fcv_main"
             android:layout_width="0dp"
             android:layout_height="0dp"
             app:layout_constraintBottom_toTopOf="@id/bnv_main"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout="@layout/fragment_home"/>
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:background="@color/white"
             android:layout_width="0dp"
             android:layout_height="60dp"
             app:layout_constraintBottom_toTopOf="@id/bnv_main"
