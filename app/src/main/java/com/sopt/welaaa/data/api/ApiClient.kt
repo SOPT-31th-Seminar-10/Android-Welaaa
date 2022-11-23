@@ -9,14 +9,14 @@ import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 
 object ApiClient {
-    private const val BASE_URL = ""
+    private const val BASE_URL = "http://3.36.161.194:3000/"
     private var retrofit: Retrofit? = null
 
     @OptIn(ExperimentalSerializationApi::class)
     fun getRetrofit(): Retrofit {
         if (retrofit == null) {
             val logger = HttpLoggingInterceptor().apply {
-                level = HttpLoggingInterceptor.Level.BASIC
+                level = HttpLoggingInterceptor.Level.BODY
             }
             val client = OkHttpClient.Builder()
                 .addInterceptor(logger)
