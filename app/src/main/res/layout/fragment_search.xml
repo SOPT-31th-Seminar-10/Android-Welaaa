@@ -5,337 +5,381 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".ScrollViewFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        style:layout_editor_absoluteX="0dp"
+        style:layout_editor_absoluteY="-364dp">
 
-        <ScrollView
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <ImageView
+                android:id="@+id/ic_search_back"
+                android:layout_width="18.67dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="23dp"
+                android:layout_marginTop="49dp"
+                android:layout_marginRight="23.02dp"
+                android:src="@drawable/ic_search_back"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/cl_shelf_rectangle"
+                android:layout_width="284dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="56dp"
+                android:layout_marginTop="44dp"
+                android:background="@drawable/background_search_rectangle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                style="@style/TextAppearance.Welaaa.System3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:hint="제목, 저자나 강사명, 낭독자 이름"
+                android:textColor="@color/welaaa_grey_400"
+                app:layout_constraintBottom_toBottomOf="@id/cl_shelf_rectangle"
+                app:layout_constraintStart_toStartOf="@+id/cl_shelf_rectangle"
+                app:layout_constraintTop_toTopOf="@+id/cl_shelf_rectangle" />
+
+            <View
+                android:id="@+id/v_line"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:layout_marginTop="94dp"
+                android:background="#F7F7F7"
+                app:layout_constraintTop_toTopOf="parent"
+                style:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/tv_popular"
+                style="@style/TextAppearance.Welaaa.System3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="106dp"
+                android:layout_marginEnd="275dp"
+                android:text="인기 검색어"
+                android:textColor="@color/welaaa_grey_400"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="136dp"
+                android:src="@drawable/iv_search_rank"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_ad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="272dp"
+                android:layout_marginBottom="1332dp"
+                app:cardCornerRadius="25dp"
+                app:cardElevation="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/iv_ad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/iv_search_ad_pic">
+
+                </ImageView>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <TextView
+                android:id="@+id/tv_text1"
+                style="@style/TextAppearance.Welaaa.System1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="19.1dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginBottom="88dp"
+                android:text="아직 조금 낯선 오디오북,"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/cv_ad"
+                app:layout_constraintStart_toStartOf="@+id/cv_ad"
+                app:layout_constraintTop_toTopOf="@+id/cv_ad" />
+
+            <TextView
+                android:id="@+id/tv_text2"
+                style="@style/TextAppearance.Welaaa.System3.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="19.1dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="61dp"
+                android:text="이것부터 들어보세요 "
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/cv_ad"
+                app:layout_constraintStart_toStartOf="@+id/cv_ad"
+                app:layout_constraintTop_toBottomOf="@+id/tv_text1" />
+
+            <TextView
+                android:id="@+id/tv_popular_author"
+                style="@style/TextAppearance.Welaaa.System3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="430dp"
+                android:layout_marginEnd="252dp"
+                android:layout_marginBottom="1286dp"
+                android:text="인기 저자/강사"
+                android:textColor="@color/welaaa_grey_400"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_search_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/iv_search_1"
+                app:layout_constraintTop_toBottomOf="@+id/tv_popular_author"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="20dp">
+            </ImageView>
+            <ImageView
+                android:id="@+id/iv_search_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/iv_search_2"
+                app:layout_constraintTop_toBottomOf="@+id/tv_popular_author"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="76dp">
+            </ImageView>
+            <ImageView
+                android:id="@+id/iv_search_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/iv_search_3"
+                app:layout_constraintTop_toBottomOf="@+id/tv_popular_author"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="176dp">
+            </ImageView>
+            <ImageView
+                android:id="@+id/iv_search_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/iv_search_4"
+                app:layout_constraintTop_toBottomOf="@+id/tv_popular_author"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="233dp">
+            </ImageView>
+            <ImageView
+                android:id="@+id/iv_search_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/iv_search_5"
+                app:layout_constraintTop_toBottomOf="@+id/tv_popular_author"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="44dp"
+                android:layout_marginStart="20dp">
+            </ImageView>
+            <ImageView
+                android:id="@+id/iv_search_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/iv_search_6"
+                app:layout_constraintTop_toBottomOf="@+id/tv_popular_author"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="44dp"
+                android:layout_marginStart="76dp">
+            </ImageView>
+            <ImageView
+                android:id="@+id/iv_search_7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/iv_search_7"
+                app:layout_constraintTop_toBottomOf="@+id/tv_popular_author"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="44dp"
+                android:layout_marginStart="132dp">
+            </ImageView>
+            <ImageView
+                android:id="@+id/iv_search_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/iv_search_8"
+                app:layout_constraintTop_toBottomOf="@+id/tv_popular_author"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="44dp"
+                android:layout_marginStart="188dp">
+            </ImageView>
+            <ImageView
+                android:id="@+id/iv_search_9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/iv_search_9"
+                app:layout_constraintTop_toBottomOf="@+id/tv_popular_author"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="80dp"
+                android:layout_marginStart="20dp">
+            </ImageView>
+
+            <TextView
+                android:id="@+id/tv_popular_voice_actor"
+                style="@style/TextAppearance.Welaaa.System3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="584dp"
+                android:layout_marginEnd="288dp"
+                android:layout_marginBottom="1132dp"
+                android:text="인기 성우"
+                android:textColor="@color/welaaa_grey_400"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_search_10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/iv_search_10"
+                app:layout_constraintTop_toBottomOf="@+id/tv_popular_voice_actor"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="20dp">
+            </ImageView>
+            <ImageView
+                android:id="@+id/iv_search_11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/iv_search_11"
+                app:layout_constraintTop_toBottomOf="@+id/tv_popular_voice_actor"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="76dp">
+            </ImageView>
+            <ImageView
+                android:id="@+id/iv_search_12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/iv_search_12"
+                app:layout_constraintTop_toBottomOf="@+id/tv_popular_voice_actor"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="132dp">
+            </ImageView>
+            <ImageView
+                android:id="@+id/iv_search_13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/iv_search_13"
+                app:layout_constraintTop_toBottomOf="@+id/tv_popular_voice_actor"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="188dp">
+            </ImageView>
+            <ImageView
+                android:id="@+id/iv_search_14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/iv_search_14"
+                app:layout_constraintTop_toBottomOf="@+id/tv_popular_voice_actor"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="244dp">
+            </ImageView>
+            <ImageView
+                android:id="@+id/iv_search_15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/iv_search_15"
+                app:layout_constraintTop_toBottomOf="@+id/tv_popular_voice_actor"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="44dp"
+                android:layout_marginStart="20dp">
+            </ImageView>
+            <ImageView
+                android:id="@+id/iv_search_16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/iv_search_16"
+                app:layout_constraintTop_toBottomOf="@+id/tv_popular_voice_actor"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="44dp"
+                android:layout_marginStart="65dp">
+            </ImageView>
+            <ImageView
+                android:id="@+id/iv_search_17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/iv_search_17"
+                app:layout_constraintTop_toBottomOf="@+id/tv_popular_voice_actor"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="44dp"
+                android:layout_marginStart="121dp">
+            </ImageView>
+            <ImageView
+                android:id="@+id/iv_search_18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/iv_search_18"
+                app:layout_constraintTop_toBottomOf="@+id/tv_popular_voice_actor"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="44dp"
+                android:layout_marginStart="177dp">
+            </ImageView>
+            <ImageView
+                android:id="@+id/iv_search_19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/iv_search_19"
+                app:layout_constraintTop_toBottomOf="@+id/tv_popular_voice_actor"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="44dp"
+                android:layout_marginStart="233dp">
+            </ImageView>
+
+
+            <TextView
+                android:id="@+id/tv_category"
+                style="@style/TextAppearance.Welaaa.System3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="702dp"
+                android:layout_marginEnd="291dp"
+                android:layout_marginBottom="1014dp"
+                android:text="카테고리"
+                android:textColor="@color/welaaa_grey_400"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_search"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintTop_toBottomOf="@id/tv_category"
+                tools:listitem="@layout/item_body_search" />
 
-                <ImageView
-                    android:id="@+id/ic_search_back"
-                    android:layout_width="18.67dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="23dp"
-                    android:layout_marginTop="49dp"
-                    android:layout_marginRight="23.02dp"
-                    android:src="@drawable/ic_search_back"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <ImageView
-                    android:id="@+id/cl_shelf_rectangle"
-                    android:layout_width="284dp"
-                    android:layout_height="30dp"
-                    android:layout_marginStart="56dp"
-                    android:layout_marginTop="44dp"
-                    android:background="@drawable/background_search_rectangle"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <EditText
-                    style="@style/TextAppearance.Welaaa.System3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="4dp"
-                    android:hint="제목, 저자나 강사명, 낭독자 이름"
-                    android:textColor="@color/welaaa_grey_400"
-                    app:layout_constraintBottom_toBottomOf="@id/cl_shelf_rectangle"
-                    app:layout_constraintStart_toStartOf="@+id/cl_shelf_rectangle"
-                    app:layout_constraintTop_toTopOf="@+id/cl_shelf_rectangle" />
-
-                <View
-                    android:id="@+id/v_line"
-                    android:layout_width="match_parent"
-                    android:layout_height="4dp"
-                    android:layout_marginTop="94dp"
-                    android:background="#F7F7F7"
-                    app:layout_constraintTop_toTopOf="parent"
-                    style:ignore="MissingConstraints" />
-
-                <TextView
-                    android:id="@+id/tv_popular"
-                    style="@style/TextAppearance.Welaaa.System3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="106dp"
-                    android:layout_marginEnd="275dp"
-                    android:text="인기 검색어"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/tv_num1"
-                    style="@style/TextAppearance.Welaaa.System3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="136dp"
-                    android:text="1"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/tv_book1"
-                    style="@style/TextAppearance.Welaaa.System3.Title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="136dp"
-                    android:text="나미야 잡화점의 기적"
-                    app:layout_constraintStart_toEndOf="@+id/tv_num1"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/tv_num2"
-                    style="@style/TextAppearance.Welaaa.System3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="166dp"
-                    android:text="2"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/tv_book2"
-                    style="@style/TextAppearance.Welaaa.System3.Title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="166dp"
-                    android:text="파친코"
-                    app:layout_constraintStart_toEndOf="@+id/tv_num2"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/tv_num3"
-                    style="@style/TextAppearance.Welaaa.System3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="196dp"
-                    android:text="3"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/tv_book3"
-                    style="@style/TextAppearance.Welaaa.System3.Title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="196dp"
-                    android:text="K-스릴러"
-                    app:layout_constraintStart_toEndOf="@+id/tv_num3"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/tv_num4"
-                    style="@style/TextAppearance.Welaaa.System3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="28dp"
-                    android:layout_marginTop="136dp"
-                    android:text="4"
-                    app:layout_constraintStart_toEndOf="@+id/tv_book1"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/tv_book4"
-                    style="@style/TextAppearance.Welaaa.System3.Title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="136dp"
-                    android:layout_marginEnd="20dp"
-                    android:text="김약국의 딸들"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/tv_num4"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/tv_num5"
-                    style="@style/TextAppearance.Welaaa.System3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="166dp"
-                    android:text="5"
-                    app:layout_constraintEnd_toStartOf="@+id/tv_book5"
-                    app:layout_constraintStart_toEndOf="@+id/tv_book2"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/tv_book5"
-                    style="@style/TextAppearance.Welaaa.System3.Title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="166dp"
-                    android:layout_marginEnd="20dp"
-                    android:text="엑시트"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/tv_num5"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/tv_num6"
-                    style="@style/TextAppearance.Welaaa.System3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="196dp"
-                    android:text="6"
-                    app:layout_constraintEnd_toStartOf="@+id/tv_book6"
-                    app:layout_constraintStart_toEndOf="@+id/tv_book3"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/tv_book6"
-                    style="@style/TextAppearance.Welaaa.System3.Title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="196dp"
-                    android:layout_marginEnd="20dp"
-                    android:text="편지"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/tv_num6"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/cv_ad"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="20dp"
-                    android:layout_marginTop="272dp"
-                    android:layout_marginBottom="1332dp"
-                    app:cardCornerRadius="25dp"
-                    app:cardElevation="0dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
-
-                    <ImageView
-                        android:id="@+id/iv_ad"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/iv_search_ad_pic">
-
-                    </ImageView>
-
-                </androidx.cardview.widget.CardView>
-
-
-                <TextView
-                    android:id="@+id/tv_text1"
-                    style="@style/TextAppearance.Welaaa.System1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="19.1dp"
-                    android:layout_marginTop="28dp"
-                    android:layout_marginBottom="88dp"
-                    android:text="아직 조금 낯선 오디오북,"
-                    android:textColor="@color/white"
-                    app:layout_constraintBottom_toBottomOf="@+id/cv_ad"
-                    app:layout_constraintStart_toStartOf="@+id/cv_ad"
-                    app:layout_constraintTop_toTopOf="@+id/cv_ad" />
-
-                <TextView
-                    android:id="@+id/tv_text2"
-                    style="@style/TextAppearance.Welaaa.System3.Title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="19.1dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="61dp"
-                    android:text="이것부터 들어보세요 "
-                    android:textColor="@color/white"
-                    app:layout_constraintBottom_toBottomOf="@+id/cv_ad"
-                    app:layout_constraintStart_toStartOf="@+id/cv_ad"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_text1" />
-
-                <TextView
-                    android:id="@+id/tv_popular_author"
-                    style="@style/TextAppearance.Welaaa.System3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="430dp"
-                    android:layout_marginEnd="252dp"
-                    android:layout_marginBottom="1286dp"
-                    android:text="인기 저자/강사"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <ImageView
-                    android:id="@+id/bg_search_green"
-                    android:layout_width="48dp"
-                    android:layout_height="28dp"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="460dp"
-                    android:src="@drawable/background_search_green"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <ImageView
-                    android:id="@+id/bg_search_white"
-                    android:layout_width="92dp"
-                    android:layout_height="28dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="460dp"
-                    android:src="@drawable/background_search_category_active"
-                    app:layout_constraintStart_toEndOf="@+id/bg_search_green"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-
-                <TextView
-                    android:id="@+id/tv_popular_voice_actor"
-                    style="@style/TextAppearance.Welaaa.System3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="584dp"
-                    android:layout_marginEnd="288dp"
-                    android:layout_marginBottom="1132dp"
-                    android:text="인기 성우"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/tv_category"
-                    style="@style/TextAppearance.Welaaa.System3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="20dp"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="702dp"
-                    android:layout_marginEnd="291dp"
-                    android:layout_marginBottom="1014dp"
-                    android:text="카테고리"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rv_home"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_marginHorizontal="20dp"
-                    android:layout_marginTop="10dp"
-                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                    app:layout_constraintTop_toBottomOf="@id/tv_category"
-                    tools:listitem="@layout/item_body_search" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </ScrollView>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 </layout>
