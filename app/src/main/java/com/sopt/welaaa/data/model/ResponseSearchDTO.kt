@@ -7,8 +7,6 @@ import kotlinx.serialization.Serializable
 data class ResponseSearchDTO(
     @SerialName("status")
     val status: Int,
-    @SerialName("success")
-    val success: Boolean,
     @SerialName("message")
     val message: String,
     @SerialName("data")
@@ -23,6 +21,6 @@ data class ResponseSearchDTO(
         @SerialName("description")
         val description: String,
         @SerialName("image")
-        val image: Int
+        val image: String
     )
 }
