@@ -1,0 +1,643 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="bookDetailInfo"
+            type="com.sopt.welaaa.data.model.BookDetailInfo" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_back_book_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|left"
+            android:layout_margin="10dp"
+            android:backgroundTint="@color/white"
+            app:borderWidth="0dp"
+            app:fabCustomSize="30dp"
+            app:srcCompat="@drawable/ic_back_round" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_share_book_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|right"
+            android:layout_margin="10dp"
+            android:backgroundTint="@color/white"
+            app:borderWidth="0dp"
+            app:fabCustomSize="30dp"
+            app:srcCompat="@drawable/ic_share_round" />
+
+        <com.amar.library.ui.StickyScrollView
+            android:id="@+id/ssv_book_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:stickyFooter="@id/cl_membership_book_detail"
+            app:stickyHeader="@id/tl_book_detail">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_book_detail"
+                    imageUrl="@{bookDetailInfo.image}"
+                    android:layout_width="112dp"
+                    android:layout_height="164dp"
+                    android:layout_marginTop="20dp"
+                    android:scaleType="center"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_kind_book_detail"
+                    style="@style/TextAppearance.Welaaa.System4.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="24dp"
+                    android:background="@drawable/background_gray_button"
+                    android:text="@string/book_detail_kind_sample"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/iv_book_detail" />
+
+                <TextView
+                    android:id="@+id/tv_kind_description_book_detail"
+                    style="@style/TextAppearance.Welaaa.System4.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:text="@string/book_detail_kind_description_sample"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_kind_book_detail"
+                    app:layout_constraintStart_toEndOf="@id/tv_kind_book_detail"
+                    app:layout_constraintTop_toTopOf="@id/tv_kind_book_detail" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:src="@drawable/ic_info_20px"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_kind_description_book_detail"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tv_kind_description_book_detail" />
+
+                <TextView
+                    android:id="@+id/tv_title_book_detail"
+                    style="@style/TextAppearance.Welaaa.System1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="18dp"
+                    android:maxLines="1"
+                    android:text="@{bookDetailInfo.title}"
+                    android:textColor="@color/welaaa_grey_900"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_kind_book_detail" />
+
+                <TextView
+                    android:id="@+id/tv_subtitle_book_detail"
+                    style="@style/TextAppearance.Welaaa.System3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:text="@{bookDetailInfo.description}"
+                    android:textColor="@color/welaaa_grey_800"
+                    app:layout_constraintEnd_toEndOf="@id/tv_title_book_detail"
+                    app:layout_constraintStart_toStartOf="@id/tv_title_book_detail"
+                    app:layout_constraintTop_toBottomOf="@id/tv_title_book_detail" />
+
+                <ImageView
+                    android:id="@+id/iv_play_book_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/ic_bookdetail_play"
+                    app:layout_constraintStart_toStartOf="@id/tv_subtitle_book_detail"
+                    app:layout_constraintTop_toBottomOf="@id/tv_subtitle_book_detail" />
+
+                <TextView
+                    android:id="@+id/tv_play_book_detail"
+                    style="@style/TextAppearance.Welaaa.System4.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:text="@string/book_detail_play_sample"
+                    android:textColor="@color/welaaa_grey_900"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_play_book_detail"
+                    app:layout_constraintStart_toEndOf="@id/iv_play_book_detail"
+                    app:layout_constraintTop_toTopOf="@id/iv_play_book_detail" />
+
+                <ImageView
+                    android:id="@+id/iv_star_book_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:src="@drawable/ic_bookdetail_star"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_play_book_detail"
+                    app:layout_constraintStart_toEndOf="@id/tv_play_book_detail"
+                    app:layout_constraintTop_toTopOf="@id/tv_play_book_detail" />
+
+                <TextView
+                    android:id="@+id/tv_star_book_detail"
+                    style="@style/TextAppearance.Welaaa.System4.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:text="@string/book_detail_start_sample"
+                    android:textColor="@color/welaaa_grey_900"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_star_book_detail"
+                    app:layout_constraintStart_toEndOf="@id/iv_star_book_detail"
+                    app:layout_constraintTop_toTopOf="@id/iv_star_book_detail" />
+
+                <ImageView
+                    android:id="@+id/iv_down_book_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:src="@drawable/ic_bookdetail_down"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_star_book_detail"
+                    app:layout_constraintStart_toEndOf="@id/tv_star_book_detail"
+                    app:layout_constraintTop_toTopOf="@id/tv_star_book_detail" />
+
+                <TextView
+                    android:id="@+id/tv_down_book_detail"
+                    style="@style/TextAppearance.Welaaa.System4.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:text="@string/book_detail_down_sample"
+                    android:textColor="@color/welaaa_grey_900"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_down_book_detail"
+                    app:layout_constraintStart_toEndOf="@id/iv_down_book_detail"
+                    app:layout_constraintTop_toTopOf="@id/iv_down_book_detail" />
+
+                <TextView
+                    android:id="@+id/tv_book_book_detail"
+                    style="@style/TextAppearance.Welaaa.System4.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:text="@string/book_detail_book_sample"
+                    android:textColor="@color/welaaa_logo_green"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_down_book_detail"
+                    app:layout_constraintStart_toEndOf="@id/tv_down_book_detail"
+                    app:layout_constraintTop_toTopOf="@id/tv_down_book_detail" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_play_book_detail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/background_gray_button"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_book_book_detail">
+
+                    <ImageView
+                        android:id="@+id/iv_play_book_book_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="9dp"
+                        android:layout_marginStart="72dp"
+                        android:src="@drawable/ic_bookdetail_play"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_play_book_book_detail"
+                        style="@style/TextAppearance.Welaaa.System3.Title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="64dp"
+                        android:text="@string/book_detail_play"
+                        android:textColor="@color/welaaa_grey_800"
+                        app:layout_constraintBottom_toBottomOf="@id/iv_play_book_book_detail"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/iv_play_book_book_detail"
+                        app:layout_constraintTop_toTopOf="@id/iv_play_book_book_detail" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_add_book_book_detail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/background_gray_button"
+                    app:layout_constraintBottom_toBottomOf="@id/cl_play_book_detail"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/cl_play_book_detail"
+                    app:layout_constraintTop_toTopOf="@id/cl_play_book_detail">
+
+                    <ImageView
+                        android:id="@+id/iv_add_book_book_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="9dp"
+                        android:layout_marginStart="12dp"
+                        android:src="@drawable/ic_bookdetail_plus"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_add_book_book_detail"
+                        style="@style/TextAppearance.Welaaa.System3.Title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="18dp"
+                        android:text="@string/book_detail_plus_sample"
+                        android:textColor="@color/welaaa_grey_800"
+                        app:layout_constraintBottom_toBottomOf="@id/iv_add_book_book_detail"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/iv_add_book_book_detail"
+                        app:layout_constraintTop_toTopOf="@id/iv_add_book_book_detail" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/tv_play_time_book_detail"
+                    style="@style/TextAppearance.Welaaa.System3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:maxLines="1"
+                    android:text="@string/book_detail_play_time_sample"
+                    android:textColor="@color/welaaa_grey_800"
+                    app:layout_constraintEnd_toEndOf="@id/cl_add_book_book_detail"
+                    app:layout_constraintStart_toStartOf="@id/cl_play_book_detail"
+                    app:layout_constraintTop_toBottomOf="@id/cl_play_book_detail" />
+
+                <TextView
+                    android:id="@+id/tv_mini_subtitle_book_detail"
+                    style="@style/TextAppearance.Welaaa.System4.Regular"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:maxLines="1"
+                    android:text="@{bookDetailInfo.description}"
+                    android:textColor="@color/welaaa_grey_400"
+                    app:layout_constraintEnd_toEndOf="@id/tv_play_time_book_detail"
+                    app:layout_constraintStart_toStartOf="@id/tv_play_time_book_detail"
+                    app:layout_constraintTop_toBottomOf="@id/tv_play_time_book_detail" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_membership_book_detail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:background="@drawable/background_green_button"
+                    app:layout_constraintEnd_toEndOf="@id/tv_mini_subtitle_book_detail"
+                    app:layout_constraintStart_toStartOf="@id/tv_mini_subtitle_book_detail"
+                    app:layout_constraintTop_toBottomOf="@id/tv_mini_subtitle_book_detail">
+
+                    <TextView
+                        style="@style/TextAppearance.Welaaa.System2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="16dp"
+                        android:gravity="center"
+                        android:text="@string/book_detail_membership_sample"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_sale_book_detail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/background_gray_button"
+                    app:layout_constraintEnd_toEndOf="@id/cl_membership_book_detail"
+                    app:layout_constraintStart_toStartOf="@id/cl_membership_book_detail"
+                    app:layout_constraintTop_toBottomOf="@id/cl_membership_book_detail">
+
+                    <TextView
+                        style="@style/TextAppearance.Welaaa.System3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="10dp"
+                        android:gravity="center"
+                        android:text="@string/book_detail_sale_sample"
+                        android:textColor="@color/welaaa_grey_800"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:id="@+id/v_book_detail"
+                    android:layout_width="0dp"
+                    android:layout_height="11dp"
+                    android:layout_marginTop="24dp"
+                    android:background="@color/welaaa_grey_200"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cl_sale_book_detail" />
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tl_book_detail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/v_book_detail"
+                    app:tabContentStart="40dp"
+                    app:tabIndicatorColor="@color/welaaa_logo_green"
+                    app:tabMode="scrollable"
+                    app:tabSelectedTextColor="@color/welaaa_logo_green"
+                    app:tabTextAppearance="@style/TextAppearance.Welaaa.System3.Title">
+
+                    <com.google.android.material.tabs.TabItem
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/book_detail_tab_option_01" />
+
+                    <com.google.android.material.tabs.TabItem
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/book_detail_tab_option_02" />
+
+                    <com.google.android.material.tabs.TabItem
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/book_detail_tab_option_03" />
+
+                </com.google.android.material.tabs.TabLayout>
+
+                <TextView
+                    android:id="@+id/tv_series_book_detail"
+                    style="@style/TextAppearance.Welaaa.System1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="40dp"
+                    android:text="@string/book_detail_series_sample"
+                    android:textColor="@color/welaaa_grey_900"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tl_book_detail" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_series_book_detail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_series_book_detail"
+                    tools:listitem="@layout/item_book_book_detail" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_description_book_detail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="34dp"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/rv_series_book_detail"
+                    tools:listitem="@layout/item_description_book_detail" />
+
+                <TextView
+                    android:id="@+id/tv_description_book_detail"
+                    style="@style/TextAppearance.Welaaa.System1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="40dp"
+                    android:text="@string/book_detail_description"
+                    android:textColor="@color/welaaa_grey_900"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/rv_description_book_detail" />
+
+                <TextView
+                    android:id="@+id/tv_description_detail_book_detail"
+                    style="@style/TextAppearance.Welaaa.System3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:lineSpacingExtra="3dp"
+                    android:text="@{bookDetailInfo.bookIntroduct}"
+                    android:textColor="@color/welaaa_grey_800"
+                    app:layout_constraintEnd_toEndOf="@id/tv_description_book_detail"
+                    app:layout_constraintStart_toStartOf="@id/tv_description_book_detail"
+                    app:layout_constraintTop_toBottomOf="@id/tv_description_book_detail" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_paper_sale_book_detail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/background_stroke_button"
+                    app:layout_constraintEnd_toEndOf="@id/tv_description_detail_book_detail"
+                    app:layout_constraintStart_toStartOf="@id/tv_description_detail_book_detail"
+                    app:layout_constraintTop_toBottomOf="@id/tv_description_detail_book_detail">
+
+                    <ImageView
+                        android:id="@+id/iv_paper_sale_link_book_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="8dp"
+                        android:layout_marginStart="102dp"
+                        android:src="@drawable/ic_bookdetail_link"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_paper_sale_book_detail"
+                        style="@style/TextAppearance.Welaaa.System3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="@string/book_detail_paper_sale"
+                        android:textColor="@color/welaaa_grey_900"
+                        app:layout_constraintBottom_toBottomOf="@id/iv_paper_sale_link_book_detail"
+                        app:layout_constraintStart_toEndOf="@id/iv_paper_sale_link_book_detail"
+                        app:layout_constraintTop_toTopOf="@id/iv_paper_sale_link_book_detail" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/tv_author_book_detail"
+                    style="@style/TextAppearance.Welaaa.System1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:text="@string/book_detail_author"
+                    android:textColor="@color/welaaa_grey_900"
+                    app:layout_constraintEnd_toEndOf="@id/cl_paper_sale_book_detail"
+                    app:layout_constraintStart_toStartOf="@id/cl_paper_sale_book_detail"
+                    app:layout_constraintTop_toBottomOf="@id/cl_paper_sale_book_detail" />
+
+                <TextView
+                    android:id="@+id/tv_author_input_book_detail"
+                    style="@style/TextAppearance.Welaaa.System3.Title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@{bookDetailInfo.name}"
+                    android:textColor="@color/welaaa_grey_600"
+                    app:layout_constraintEnd_toEndOf="@id/tv_author_book_detail"
+                    app:layout_constraintStart_toStartOf="@id/tv_author_book_detail"
+                    app:layout_constraintTop_toBottomOf="@id/tv_author_book_detail" />
+
+                <TextView
+                    android:id="@+id/tv_author_description_book_detail"
+                    style="@style/TextAppearance.Welaaa.System3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:lineSpacingExtra="3dp"
+                    android:text="@{bookDetailInfo.authorIntroduct}"
+                    android:textColor="@color/welaaa_grey_800"
+                    app:layout_constraintEnd_toEndOf="@id/tv_author_input_book_detail"
+                    app:layout_constraintStart_toStartOf="@id/tv_author_input_book_detail"
+                    app:layout_constraintTop_toBottomOf="@id/tv_author_input_book_detail" />
+
+                <TextView
+                    android:id="@+id/tv_keyword_book_detail"
+                    style="@style/TextAppearance.Welaaa.System1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:text="@string/book_detail_keyword"
+                    android:textColor="@color/welaaa_grey_900"
+                    app:layout_constraintEnd_toEndOf="@id/tv_author_description_book_detail"
+                    app:layout_constraintStart_toStartOf="@id/tv_author_description_book_detail"
+                    app:layout_constraintTop_toBottomOf="@id/tv_author_description_book_detail" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_keyword_book_detail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+                    app:layout_constraintEnd_toEndOf="@id/tv_keyword_book_detail"
+                    app:layout_constraintStart_toStartOf="@id/tv_keyword_book_detail"
+                    app:layout_constraintTop_toBottomOf="@id/tv_keyword_book_detail"
+                    tools:itemCount="3"
+                    tools:listitem="@layout/item_keyword_book_detail" />
+
+                <TextView
+                    android:id="@+id/tv_information_book_detail"
+                    style="@style/TextAppearance.Welaaa.System1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:text="@string/book_detail_information"
+                    android:textColor="@color/welaaa_grey_900"
+                    app:layout_constraintEnd_toEndOf="@id/rv_keyword_book_detail"
+                    app:layout_constraintStart_toStartOf="@id/rv_keyword_book_detail"
+                    app:layout_constraintTop_toBottomOf="@id/rv_keyword_book_detail" />
+
+                <TextView
+                    android:id="@+id/tv_information_detail_book_detail"
+                    style="@style/TextAppearance.Welaaa.System3.Title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:lineSpacingExtra="4dp"
+                    android:text="@string/book_detail_information_detail"
+                    android:textColor="@color/welaaa_grey_800"
+                    app:layout_constraintStart_toStartOf="@id/tv_information_book_detail"
+                    app:layout_constraintTop_toBottomOf="@id/tv_information_book_detail" />
+
+                <TextView
+                    android:id="@+id/tv_information_description_book_detail"
+                    style="@style/TextAppearance.Welaaa.System3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:lineSpacingExtra="4dp"
+                    android:text="@string/book_detail_information_description"
+                    android:textColor="@color/welaaa_grey_800"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_information_detail_book_detail"
+                    app:layout_constraintStart_toEndOf="@id/tv_information_detail_book_detail"
+                    app:layout_constraintTop_toTopOf="@id/tv_information_detail_book_detail" />
+
+                <TextView
+                    android:id="@+id/tv_recommendation_book_detail"
+                    style="@style/TextAppearance.Welaaa.System1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="40dp"
+                    android:text="@string/book_detail_recommendation_sample"
+                    android:textColor="@color/welaaa_grey_900"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_information_detail_book_detail" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_series_bottom_book_detail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="80dp"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_recommendation_book_detail"
+                    tools:listitem="@layout/item_book_book_detail" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.amar.library.ui.StickyScrollView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_membership_bottom_book_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:paddingHorizontal="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="70dp"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/TextAppearance.Welaaa.System2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_green_button"
+                android:gravity="center"
+                android:paddingVertical="16dp"
+                android:text="@string/book_detail_membership_sample"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>
