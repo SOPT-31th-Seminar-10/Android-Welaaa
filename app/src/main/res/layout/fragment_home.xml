@@ -39,9 +39,11 @@
                 </androidx.appcompat.widget.Toolbar>
 
                 <com.google.android.material.tabs.TabLayout
+                    app:tabRippleColor="@android:color/transparent"
+                    app:tabGravity="start"
                     android:id="@+id/home_tab"
                     style="@style/TextAppearance.Welaaa.System2"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:lineSpacingExtra="5sp"
                     app:layout_constraintTop_toBottomOf="@id/home_toolbar"
@@ -231,6 +233,16 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/recyclerview_like" />
 
+                <ImageView
+                    android:layout_marginEnd="19dp"
+                    app:layout_constraintTop_toTopOf="@id/tv_recycler_month"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_recycler_month"
+                    android:id="@+id/iv_month_week_title"
+                    android:src="@drawable/home_month_week"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recyclerview_month"
                     android:layout_width="match_parent"
@@ -273,7 +285,6 @@
                     android:id="@+id/iv_book_review"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="57dp"
                     android:layout_marginBottom="16dp"
                     android:paddingHorizontal="20dp"
                     android:src="@drawable/home_bookreview"

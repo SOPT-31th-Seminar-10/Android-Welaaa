@@ -20,4 +20,5 @@
     <string name="recycler_like_title">반유진님이 좋아할 만한 오디오북</string>
     <string name="recycler_month_title">이 달의 오디오북</string>
     <string name="recycler_record_title">지금 막 녹음을 끝낸 오디오북</string>
+
 </resources>

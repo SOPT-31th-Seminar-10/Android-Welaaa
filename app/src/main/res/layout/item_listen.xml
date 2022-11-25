@@ -13,34 +13,97 @@
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="92dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingEnd="10dp"
+        android:paddingEnd="9dp"
         tools:context=".presentation.home.view.HomeFragment">
 
+        <View
+            android:id="@+id/frame_playlist_text"
+            android:layout_width="198dp"
+            android:layout_height="64dp"
+            android:background="@drawable/radius_frame_playlist_text"
+            android:elevation="2dp"
+            android:layout_marginBottom="1dp"
+            android:layout_marginEnd="1dp"
+            app:layout_constraintBottom_toBottomOf="@id/frame_playlist"
+            app:layout_constraintEnd_toEndOf="@id/frame_playlist" />
 
-        <ImageView
-            android:id="@+id/circle_item"
+        <TextView
+            android:id="@+id/tv_playlist_title"
+            style="@style/TextAppearance.Welaaa.System2"
+            android:layout_width="106dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="9dp"
+            android:layout_marginEnd="15dp"
+            android:elevation="4dp"
+            android:lineSpacingExtra="5sp"
+            android:outlineProvider="none"
+            android:text="@{homeBook.title}"
+            android:textColor="@color/welaaa_grey_900"
+            app:layout_constraintEnd_toEndOf="@id/frame_playlist_text"
+            app:layout_constraintTop_toTopOf="@id/frame_playlist_text"
+            tools:text="책 제목(6)" />
+
+        <TextView
+            android:id="@+id/tv_playlist_author"
+            style="@style/TextAppearance.Welaaa.System3"
+            android:layout_width="56dp"
+            android:layout_height="22dp"
+            android:elevation="4dp"
+            android:lineSpacingExtra="5sp"
+            android:outlineProvider="none"
+            android:text="@{homeBook.author}"
+            android:textColor="@color/welaaa_grey_600"
+            app:layout_constraintStart_toStartOf="@id/tv_playlist_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_playlist_title"
+            tools:text="저자(3)" />
+
+        <View
+            android:id="@+id/frame_playlist"
+            android:layout_width="220dp"
+            android:layout_height="105dp"
+            android:elevation="4dp"
+            android:outlineProvider="none"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/frame_playlist_item"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:background="@drawable/home_circle_frame"
-            app:bookImageCircle="@{homeBook.image}"
+            android:elevation="4dp"
+            android:outlineProvider="none"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_playlist_item"
+            android:layout_width="74dp"
+            android:layout_height="74dp"
+            android:elevation="4dp"
+            android:outlineProvider="none"
+            app:bookImageCircle="@{homeBook.image}"
+            app:layout_constraintBottom_toBottomOf="@id/frame_playlist_item"
+            app:layout_constraintEnd_toEndOf="@id/frame_playlist_item"
+            app:layout_constraintStart_toStartOf="@id/frame_playlist_item"
+            app:layout_constraintTop_toTopOf="@id/frame_playlist_item"
             tools:src="@drawable/home_book" />
 
         <ImageButton
-
             android:id="@+id/image_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="60dp"
+            android:layout_marginStart="62dp"
             android:background="@drawable/home_circle_button"
             android:elevation="4dp"
-            android:src="@drawable/home_circle_button"
-            app:layout_constraintBottom_toBottomOf="@id/circle_item"
-            app:layout_constraintStart_toStartOf="@id/circle_item"
-            app:layout_constraintTop_toTopOf="@id/circle_item" />
+            android:src="@drawable/ic_home_play"
+            app:layout_constraintBottom_toBottomOf="@id/iv_playlist_item"
+            app:layout_constraintStart_toStartOf="@id/iv_playlist_item"
+            app:layout_constraintTop_toTopOf="@id/iv_playlist_item" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -18,13 +18,10 @@ fun loadBookImage(view: ImageView, imageUrl: String) {
 
 @BindingAdapter("app:bookImageCircle")
 fun loadBookImage2(view: ImageView, imageUrl: String) {
-    imageUrl.let {
         Glide
             .with(view.context)
             .load(imageUrl)
             .circleCrop()
-            .centerCrop()
             .into(view)
-    }
 
 }
