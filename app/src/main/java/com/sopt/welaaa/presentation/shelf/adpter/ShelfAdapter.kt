@@ -24,7 +24,7 @@ class ShelfAdapter : ListAdapter<ResponseShelfDTO.Book,ShelfAdapter.ShelfViewHol
         return ShelfViewHolder(ItemBodyShelfBinding.inflate(inflater, parent, false))
     }
     override fun onBindViewHolder(holder: ShelfViewHolder, position: Int) {
-        holder.onBind(getItem(position))
+        holder.onBind(currentList[position])
     }
 
     class ShelfViewHolder(private val binding: ItemBodyShelfBinding) :

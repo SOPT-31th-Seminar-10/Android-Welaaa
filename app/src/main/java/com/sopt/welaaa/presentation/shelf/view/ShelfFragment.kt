@@ -12,50 +12,44 @@ import com.sopt.welaaa.presentation.shelf.adpter.ShelfAdapter
 import com.sopt.welaaa.presentation.shelf.viewmodel.ShelfViewModel
 import com.sopt.welaaa.util.binding.BindingFragment
 
-class ShelfFragment : BindingFragment<FragmentShelfBinding>(R.layout.fragment_shelf) {
-    class ShelfFragment : Fragment() {
-        private var _binding: FragmentShelfBinding? = null
-        private val binding: FragmentShelfBinding
-            get() = _binding!!
+class ShelfFragment : Fragment() {
+    private var _binding: FragmentShelfBinding? = null
+    private val binding: FragmentShelfBinding
+        get() = _binding!!
 
-        private val shelfViewModel by viewModels<ShelfViewModel>()
-        override fun onCreateView(
-            inflater: LayoutInflater,
-            container: ViewGroup?,
-            savedInstanceState: Bundle?
-        ): View? {
-            _binding = FragmentShelfBinding.inflate(inflater, container, false)
-            return binding.root
-        }
+    private val shelfViewModel by viewModels<ShelfViewModel>()
 
-        override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-            super.onViewCreated(view, savedInstanceState)
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        _binding = FragmentShelfBinding.inflate(inflater, container, false)
+        return binding.root
+    }
 
-            binding.lifecycleOwner = viewLifecycleOwner
-            initAdapter()
-            initView()
-            setObserver()
-        }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
-        private fun initView() {
-            shelfViewModel.getShelf()
-        }
+        binding.lifecycleOwner = viewLifecycleOwner
+        initAdapter()
+        initView()
+        setObserver()
+    }
 
-        private var shelfAdapter: ShelfAdapter = ShelfAdapter()
+    private fun initView() {
+        shelfViewModel.getShelf()
+    }
 
-        private fun initAdapter() {
-            binding.rvShelf.adapter = shelfAdapter
-        }
+    private var shelfAdapter: ShelfAdapter = ShelfAdapter()
 
-        private fun setObserver() {
-            shelfViewModel.shelfResult.observe(viewLifecycleOwner) {
-                shelfAdapter.submitList(it.data.toMutableList())
-            }
-        }
+    private fun initAdapter() {
+        binding.rvShelf.adapter = shelfAdapter
+    }
 
-        override fun onDestroyView() {
-            super.onDestroyView()
-            _binding = null
+    private fun setObserver() {
+        shelfViewModel.shelfResult.observe(viewLifecycleOwner) {
+            shelfAdapter.submitList(it.data.toMutableList())
         }
     }
 }
