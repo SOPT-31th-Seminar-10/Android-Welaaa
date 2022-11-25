@@ -37,4 +37,18 @@
     <string name="failure_400">"잘못된 요청 입니다."</string>
     <string name="failure_500">"서버가 불안정한 상태 입니다."</string>
     <string name="failure_network">"네트워크가 불안정한 상태 입니다."</string>
+
+    <!-- Home Text -->
+    <string name="tab_audio">오디오북</string>
+    <string name="tab_novel">웹소설</string>
+    <string name="tab_class">클래스</string>
+    <string name="home_main_pick">윌라\'s PICK</string>
+    <string name="home_main_title">자비로운 신은\n왜 인간에게\n고통을 주는가?</string>
+    <string name="home_main_content">신과 인간에 대한 고뇌와 탐구\n이문열 인생 역작을 듣다</string>
+    <string name="home_sub_title">제 남편은 결코 사람을 죽이지 않았어요</string>
+    <string name="home_sub_content"><![CDATA[K-스릴러 <붉은 열대어>]]></string>
+    <string name="recycler_listen_title">듣고 있던 오디오북! 계속 들어볼까요?</string>
+    <string name="recycler_like_title">반유진님이 좋아할 만한 오디오북</string>
+    <string name="recycler_month_title">이 달의 오디오북</string>
+    <string name="recycler_record_title">지금 막 녹음을 끝낸 오디오북</string>
 </resources>

@@ -29,4 +29,10 @@ object ApiClient {
         }
         return retrofit!!
     }
+
+    inline fun <reified T> create(): T = getRetrofit().create<T>(T::class.java)
+
+    object ServicePool {
+        val getBookService = create<GetBookService>()
+    }
 }
