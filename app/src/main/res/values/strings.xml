@@ -6,8 +6,34 @@
     <string name="setting">관리</string>
     <string name="mini_player_example_title">2</string>
     <string name="mini_player_subtitle_example">파친코1</string>
-    <string name="bookimage">bookImage</string>
 
+    <!-- Book Detail Text -->
+    <string name="book_detail_kind_sample">오디오북</string>
+    <string name="book_detail_kind_description_sample">윌라 독점 · 이달의 오디오북 · 완독</string>
+    <string name="book_detail_play_sample">110만 ·</string>
+    <string name="book_detail_start_sample">4.9 ·</string>
+    <string name="book_detail_down_sample">1.4GB  ·</string>
+    <string name="book_detail_book_sample"><![CDATA[소설 >]]></string>
+    <string name="book_detail_play">재생하기</string>
+    <string name="book_detail_play_time_sample">총 재생 시간 10시간 44분</string>
+    <string name="book_detail_plus_sample">찜 7,371</string>
+    <string name="book_detail_membership_sample">멤버십 가입하고 무제한 감상하기</string>
+    <string name="book_detail_sale_sample">개별 구매하기 15,000원</string>
+    <string name="book_detail_tab_option_01">책 정보</string>
+    <string name="book_detail_tab_option_02">목차 13</string>
+    <string name="book_detail_tab_option_03">리뷰 444</string>
+    <string name="book_detail_series_sample">[시리즈] 파친코</string>
+    <string name="book_detail_description">오디오북 소개</string>
+    <string name="book_detail_paper_sale">종이책 구매하기</string>
+    <string name="book_detail_author">저자 소개</string>
+    <string name="book_detail_keyword">관련 키워드</string>
+    <string name="book_detail_information">상세 정보</string>
+    <string name="book_detail_information_detail">저자\n낭독자\n도서출간일\n오디오북 제작\n오디오북 오픈일</string>
+    <string name="book_detail_information_description">이민진\n이미나, 김나율, 김상백\n2022.07.27\n윌라\n2022.08.10</string>
+    <string name="book_detail_recommendation_sample">김나은님이 좋아할 콘텐츠</string>
+    <string name="item_description_sample">1/8</string>
+
+    <!-- Home Text -->
     <string name="tab_audio">오디오북</string>
     <string name="tab_novel">웹소설</string>
     <string name="tab_class">클래스</string>
@@ -21,4 +47,9 @@
     <string name="recycler_month_title">이 달의 오디오북</string>
     <string name="recycler_record_title">지금 막 녹음을 끝낸 오디오북</string>
 
+    <!-- HTTP Code Error Text -->
+    <string name="failure_400">"잘못된 요청 입니다."</string>
+    <string name="failure_500">"서버가 불안정한 상태 입니다."</string>
+    <string name="failure_network">"네트워크가 불안정한 상태 입니다."</string>
+    
 </resources>

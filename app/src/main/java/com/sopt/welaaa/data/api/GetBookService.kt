@@ -5,7 +5,7 @@ import retrofit2.Response
 import retrofit2.http.GET
 
 interface GetBookService {
-    @GET("/book")
+    @GET("book")
     suspend fun getBookList(
     ): Response<ResponseBookDto>
 }
