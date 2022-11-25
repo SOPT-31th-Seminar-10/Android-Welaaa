@@ -20,19 +20,19 @@
                 android:id="@+id/ic_search_back"
                 android:layout_width="18.67dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="23dp"
-                android:layout_marginTop="49dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginRight="23dp"
                 android:src="@drawable/ic_search_back"
+                app:layout_constraintBottom_toBottomOf="@id/cl_shelf_rectangle"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="@id/cl_shelf_rectangle" />
 
             <ImageView
                 android:id="@+id/cl_shelf_rectangle"
                 android:layout_width="284dp"
                 android:layout_height="30dp"
                 android:layout_marginStart="56dp"
-                android:layout_marginTop="44dp"
+                android:layout_marginTop="20dp"
                 android:background="@drawable/background_search_rectangle"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -42,7 +42,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="4dp"
+                android:background="@color/welaaa_grey_300"
                 android:hint="제목, 저자나 강사명, 낭독자 이름"
                 android:textColor="@color/welaaa_grey_400"
                 app:layout_constraintBottom_toBottomOf="@id/cl_shelf_rectangle"
@@ -53,9 +53,9 @@
                 android:id="@+id/v_line"
                 android:layout_width="match_parent"
                 android:layout_height="4dp"
-                android:layout_marginTop="94dp"
+                android:layout_marginTop="20dp"
                 android:background="#F7F7F7"
-                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cl_shelf_rectangle"
                 style:ignore="MissingConstraints" />
 
             <TextView
@@ -64,28 +64,28 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
-                android:layout_marginTop="106dp"
+                android:layout_marginTop="12dp"
                 android:layout_marginEnd="275dp"
                 android:text="인기 검색어"
                 android:textColor="@color/welaaa_grey_400"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@id/v_line" />
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="0dp"
-                android:layout_marginTop="136dp"
+                android:layout_marginTop="25dp"
                 android:src="@drawable/iv_search_rank"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"></ImageView>
+                app:layout_constraintTop_toTopOf="@id/tv_popular" />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cv_ad"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp"
-                android:layout_marginTop="272dp"
+                android:layout_marginTop="250dp"
                 android:layout_marginBottom="1332dp"
                 app:cardCornerRadius="25dp"
                 app:cardElevation="0dp"
@@ -102,7 +102,6 @@
                 </ImageView>
 
             </androidx.cardview.widget.CardView>
-
 
             <TextView
                 android:id="@+id/tv_text1"
@@ -138,7 +137,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
-                android:layout_marginTop="430dp"
+                android:layout_marginTop="420dp"
                 android:layout_marginEnd="252dp"
                 android:layout_marginBottom="1286dp"
                 android:text="인기 저자/강사"
@@ -150,92 +149,91 @@
                 android:id="@+id/iv_search_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/iv_search_1"
-                app:layout_constraintTop_toBottomOf="@+id/tv_popular_author"
-                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="8dp"
-                android:layout_marginStart="20dp">
-            </ImageView>
+                android:src="@drawable/iv_search_1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_popular_author" />
+
             <ImageView
                 android:id="@+id/iv_search_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/iv_search_2"
-                app:layout_constraintTop_toBottomOf="@+id/tv_popular_author"
-                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="76dp"
                 android:layout_marginTop="8dp"
-                android:layout_marginStart="76dp">
-            </ImageView>
+                android:src="@drawable/iv_search_2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_popular_author" />
+
             <ImageView
                 android:id="@+id/iv_search_3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/iv_search_3"
-                app:layout_constraintTop_toBottomOf="@+id/tv_popular_author"
-                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="176dp"
                 android:layout_marginTop="8dp"
-                android:layout_marginStart="176dp">
-            </ImageView>
+                android:src="@drawable/iv_search_3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_popular_author" />
+
             <ImageView
                 android:id="@+id/iv_search_4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/iv_search_4"
-                app:layout_constraintTop_toBottomOf="@+id/tv_popular_author"
-                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="233dp"
                 android:layout_marginTop="8dp"
-                android:layout_marginStart="233dp">
-            </ImageView>
+                android:src="@drawable/iv_search_4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_popular_author" />
+
             <ImageView
                 android:id="@+id/iv_search_5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/iv_search_5"
-                app:layout_constraintTop_toBottomOf="@+id/tv_popular_author"
-                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="44dp"
-                android:layout_marginStart="20dp">
-            </ImageView>
+                android:src="@drawable/iv_search_5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_popular_author" />
+
             <ImageView
                 android:id="@+id/iv_search_6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/iv_search_6"
-                app:layout_constraintTop_toBottomOf="@+id/tv_popular_author"
-                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="76dp"
                 android:layout_marginTop="44dp"
-                android:layout_marginStart="76dp">
-            </ImageView>
+                android:src="@drawable/iv_search_6"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_popular_author" />
+
             <ImageView
                 android:id="@+id/iv_search_7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/iv_search_7"
-                app:layout_constraintTop_toBottomOf="@+id/tv_popular_author"
-                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="132dp"
                 android:layout_marginTop="44dp"
-                android:layout_marginStart="132dp">
-            </ImageView>
+                android:src="@drawable/iv_search_7"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_popular_author" />
+
             <ImageView
                 android:id="@+id/iv_search_8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/iv_search_8"
-                app:layout_constraintTop_toBottomOf="@+id/tv_popular_author"
-                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="188dp"
                 android:layout_marginTop="44dp"
-                android:layout_marginStart="188dp">
-            </ImageView>
+                android:src="@drawable/iv_search_8"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_popular_author" />
+
             <ImageView
                 android:id="@+id/iv_search_9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/iv_search_9"
-                app:layout_constraintTop_toBottomOf="@+id/tv_popular_author"
-                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="80dp"
-                android:layout_marginStart="20dp">
-            </ImageView>
+                android:src="@drawable/iv_search_9"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_popular_author" />
 
             <TextView
                 android:id="@+id/tv_popular_voice_actor"
@@ -255,102 +253,101 @@
                 android:id="@+id/iv_search_10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/iv_search_10"
-                app:layout_constraintTop_toBottomOf="@+id/tv_popular_voice_actor"
-                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="8dp"
-                android:layout_marginStart="20dp">
-            </ImageView>
+                android:src="@drawable/iv_search_10"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_popular_voice_actor" />
+
             <ImageView
                 android:id="@+id/iv_search_11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/iv_search_11"
-                app:layout_constraintTop_toBottomOf="@+id/tv_popular_voice_actor"
-                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="76dp"
                 android:layout_marginTop="8dp"
-                android:layout_marginStart="76dp">
-            </ImageView>
+                android:src="@drawable/iv_search_11"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_popular_voice_actor" />
+
             <ImageView
                 android:id="@+id/iv_search_12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/iv_search_12"
-                app:layout_constraintTop_toBottomOf="@+id/tv_popular_voice_actor"
-                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="132dp"
                 android:layout_marginTop="8dp"
-                android:layout_marginStart="132dp">
-            </ImageView>
+                android:src="@drawable/iv_search_12"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_popular_voice_actor" />
+
             <ImageView
                 android:id="@+id/iv_search_13"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/iv_search_13"
-                app:layout_constraintTop_toBottomOf="@+id/tv_popular_voice_actor"
-                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="188dp"
                 android:layout_marginTop="8dp"
-                android:layout_marginStart="188dp">
-            </ImageView>
+                android:src="@drawable/iv_search_13"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_popular_voice_actor" />
+
             <ImageView
                 android:id="@+id/iv_search_14"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/iv_search_14"
-                app:layout_constraintTop_toBottomOf="@+id/tv_popular_voice_actor"
-                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="244dp"
                 android:layout_marginTop="8dp"
-                android:layout_marginStart="244dp">
-            </ImageView>
+                android:src="@drawable/iv_search_14"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_popular_voice_actor" />
+
             <ImageView
                 android:id="@+id/iv_search_15"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/iv_search_15"
-                app:layout_constraintTop_toBottomOf="@+id/tv_popular_voice_actor"
-                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="44dp"
-                android:layout_marginStart="20dp">
-            </ImageView>
+                android:src="@drawable/iv_search_15"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_popular_voice_actor" />
+
             <ImageView
                 android:id="@+id/iv_search_16"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/iv_search_16"
-                app:layout_constraintTop_toBottomOf="@+id/tv_popular_voice_actor"
-                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="65dp"
                 android:layout_marginTop="44dp"
-                android:layout_marginStart="65dp">
-            </ImageView>
+                android:src="@drawable/iv_search_16"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_popular_voice_actor" />
+
             <ImageView
                 android:id="@+id/iv_search_17"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/iv_search_17"
-                app:layout_constraintTop_toBottomOf="@+id/tv_popular_voice_actor"
-                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="121dp"
                 android:layout_marginTop="44dp"
-                android:layout_marginStart="121dp">
-            </ImageView>
+                android:src="@drawable/iv_search_17"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_popular_voice_actor" />
+
             <ImageView
                 android:id="@+id/iv_search_18"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/iv_search_18"
-                app:layout_constraintTop_toBottomOf="@+id/tv_popular_voice_actor"
-                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="177dp"
                 android:layout_marginTop="44dp"
-                android:layout_marginStart="177dp">
-            </ImageView>
+                android:src="@drawable/iv_search_18"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_popular_voice_actor" />
+
             <ImageView
                 android:id="@+id/iv_search_19"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/iv_search_19"
-                app:layout_constraintTop_toBottomOf="@+id/tv_popular_voice_actor"
-                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="233dp"
                 android:layout_marginTop="44dp"
-                android:layout_marginStart="233dp">
-            </ImageView>
+                android:src="@drawable/iv_search_19"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_popular_voice_actor" />
 
 
             <TextView
@@ -373,10 +370,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                app:layout_constraintStart_toStartOf="parent"
                 android:orientation="vertical"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tv_category"
                 tools:listitem="@layout/item_body_search" />
 

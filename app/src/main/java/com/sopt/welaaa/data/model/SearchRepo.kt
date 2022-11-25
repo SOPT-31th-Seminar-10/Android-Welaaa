@@ -1,4 +1,4 @@
-package com.sopt.welaaa.data.api
+package com.sopt.welaaa.data.model
 
 data class SearchRepo(
     val id: Int,

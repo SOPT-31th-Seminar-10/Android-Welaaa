@@ -23,7 +23,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
-                android:layout_marginTop="68dp"
+                android:layout_marginTop="44dp"
                 android:text="내 서랍"
                 android:textColor="@color/welaaa_grey_900"
                 app:layout_constraintStart_toStartOf="parent"
@@ -31,9 +31,9 @@
 
             <ImageView
                 android:id="@+id/ic_shelf_alert"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="68dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="44dp"
                 android:layout_marginRight="23.02dp"
                 android:src="@drawable/ic_shelf_alert"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -43,7 +43,7 @@
                 android:id="@+id/iv_shelf_profile"
                 android:layout_width="44dp"
                 android:layout_height="0dp"
-                android:layout_marginTop="112dp"
+                android:layout_marginTop="95dp"
                 android:layout_marginEnd="8dp"
                 android:src="@drawable/iv_shelf_profile"
                 app:layout_constraintDimensionRatio="1:1"
@@ -56,7 +56,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="71dp"
-                android:layout_marginTop="125dp"
+                android:layout_marginTop="101dp"
                 android:text="우주최강10조"
                 android:textColor="@color/welaaa_grey_900"
                 app:layout_constraintStart_toStartOf="parent"
@@ -195,13 +195,12 @@
                 app:layout_constraintTop_toTopOf="parent"
                 style:ignore="MissingConstraints" />
 
-
             <com.google.android.material.tabs.TabLayout
                 android:id="@+id/tab"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
-                android:layout_marginEnd="61dp"
+                android:layout_marginEnd="20dp"
                 android:background="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

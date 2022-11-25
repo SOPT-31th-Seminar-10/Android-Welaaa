@@ -13,11 +13,11 @@
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_item_like_count"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingEnd="10dp"
         tools:context=".presentation.home.view.HomeFragment">
-
 
         <ImageView
             android:id="@+id/thumbnailImage"

@@ -12,13 +12,13 @@ import com.sopt.welaaa.presentation.bookdetail.adapter.BookDescriptionAdapter
 import com.sopt.welaaa.presentation.bookdetail.adapter.BookDetailAdapter
 import com.sopt.welaaa.presentation.bookdetail.adapter.KeywordAdapter
 import com.sopt.welaaa.presentation.bookdetail.viewmodel.BookDetailViewModel
-import com.sopt.welaaa.presentation.common.ViewModelFactory
+import com.sopt.welaaa.presentation.home.view.HomeFragment
 import com.sopt.welaaa.util.EventObserver
 import com.sopt.welaaa.util.binding.BindingFragment
 
 class BookDetailFragment :
     BindingFragment<FragmentBookDetailBinding>(R.layout.fragment_book_detail) {
-    private val viewModel: BookDetailViewModel by viewModels { ViewModelFactory() }
+    private val viewModel: BookDetailViewModel by viewModels()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -28,6 +28,15 @@ class BookDetailFragment :
         setObservers()
         setAdapters()
         setVisibility()
+        setNavigation()
+    }
+
+    private fun setNavigation() {
+        binding.fabBackBookDetail.setOnClickListener {
+            parentFragmentManager.beginTransaction()
+                .replace(R.id.fcv_main, HomeFragment())
+                .commit()
+        }
     }
 
     private fun initView() {
