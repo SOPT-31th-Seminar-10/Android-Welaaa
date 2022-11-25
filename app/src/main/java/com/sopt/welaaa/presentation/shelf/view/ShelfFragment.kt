@@ -13,7 +13,7 @@ import com.sopt.welaaa.presentation.shelf.viewmodel.ShelfViewModel
 import com.sopt.welaaa.util.binding.BindingFragment
 
 class ShelfFragment : BindingFragment<FragmentShelfBinding>(R.layout.fragment_shelf) {
-    class SearchFragment : Fragment() {
+    class ShelfFragment : Fragment() {
         private var _binding: FragmentShelfBinding? = null
         private val binding: FragmentShelfBinding
             get() = _binding!!

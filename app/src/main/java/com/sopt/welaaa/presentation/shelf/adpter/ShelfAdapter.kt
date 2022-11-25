@@ -17,7 +17,7 @@ class ShelfAdapter : ListAdapter<ResponseShelfDTO.Book,ShelfAdapter.ShelfViewHol
 ) {
     private lateinit var inflater: LayoutInflater
 
-    override fun onCreateViewHolder(parent:ViewGroup, viewType:Int): ShelfViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ShelfViewHolder {
         if (!::inflater.isInitialized) {
             inflater = LayoutInflater.from(parent.context)
         }
