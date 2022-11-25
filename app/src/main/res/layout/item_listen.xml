@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="homeBook"
+            type="com.sopt.welaaa.data.model.ResponseBookDto.Data" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="92dp"
+        android:layout_height="wrap_content"
+        android:paddingEnd="10dp"
+        tools:context=".presentation.home.view.HomeFragment">
+
+
+        <ImageView
+            android:id="@+id/circle_item"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/home_circle_frame"
+            app:bookImageCircle="@{homeBook.image}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/home_book" />
+
+        <ImageButton
+
+            android:id="@+id/image_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:background="@drawable/home_circle_button"
+            android:elevation="4dp"
+            android:src="@drawable/home_circle_button"
+            app:layout_constraintBottom_toBottomOf="@id/circle_item"
+            app:layout_constraintStart_toStartOf="@id/circle_item"
+            app:layout_constraintTop_toTopOf="@id/circle_item" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

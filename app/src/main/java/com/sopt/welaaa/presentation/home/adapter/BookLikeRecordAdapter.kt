@@ -1,4 +1,4 @@
-package com.sopt.welaaa.data.repository
+package com.sopt.welaaa.presentation.home.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -6,29 +6,26 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.sopt.welaaa.data.model.ResponseBookDto
-import com.sopt.welaaa.databinding.ItemRcyler1Binding
+import com.sopt.welaaa.databinding.ItemLikeRecordBinding
 
-class GetBookListAdapter_1 :
-    ListAdapter<ResponseBookDto.Data, GetBookListAdapter_1.ItemViewHolder>(Differ()) {
+class BookLikeRecordAdapter :
+    ListAdapter<ResponseBookDto.Data, BookLikeRecordAdapter.ItemViewHolder>(Differ()) {
 
 
-    inner class ItemViewHolder(val binding: ItemRcyler1Binding) :
+    inner class ItemViewHolder(val binding: ItemLikeRecordBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
 
         fun bind(bookList: ResponseBookDto.Data) {
 
-            with(binding) {
-                homeBook = bookList
-            }
-
+            binding.homeBook = bookList
 
         }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
         val inflater = LayoutInflater.from(parent.context)
-        val binding = ItemRcyler1Binding.inflate(inflater)
+        val binding = ItemLikeRecordBinding.inflate(inflater)
 
         return ItemViewHolder(binding)
     }

@@ -1,7 +1,6 @@
 package com.sopt.welaaa.data.api
 
 import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
-import com.sopt.welaaa.data.source.GetBookService
 import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.json.Json
 import okhttp3.MediaType.Companion.toMediaType

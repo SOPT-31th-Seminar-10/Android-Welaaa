@@ -1,4 +1,4 @@
-package com.sopt.welaaa.data.source
+package com.sopt.welaaa.data.api
 
 import com.sopt.welaaa.data.model.ResponseBookDto
 import retrofit2.Response
