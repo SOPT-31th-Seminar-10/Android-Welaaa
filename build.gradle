@@ -15,4 +15,5 @@ ext {
     okhttp_version = '4.10.0'
     kotlinx_serialization_version = '1.4.1'
     kotlinx_serialization_converter_version = '0.8.0'
+    sticky_version = '1.0.3'
 }
