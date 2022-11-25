@@ -33,6 +33,11 @@
     <string name="book_detail_recommendation_sample">김나은님이 좋아할 콘텐츠</string>
     <string name="item_description_sample">1/8</string>
 
+    <!-- HTTP Code Error Text -->
+    <string name="failure_400">"잘못된 요청 입니다."</string>
+    <string name="failure_500">"서버가 불안정한 상태 입니다."</string>
+    <string name="failure_network">"네트워크가 불안정한 상태 입니다."</string>
+
     <!-- Home Text -->
     <string name="tab_audio">오디오북</string>
     <string name="tab_novel">웹소설</string>
@@ -47,9 +52,6 @@
     <string name="recycler_month_title">이 달의 오디오북</string>
     <string name="recycler_record_title">지금 막 녹음을 끝낸 오디오북</string>
 
-    <!-- HTTP Code Error Text -->
-    <string name="failure_400">"잘못된 요청 입니다."</string>
-    <string name="failure_500">"서버가 불안정한 상태 입니다."</string>
-    <string name="failure_network">"네트워크가 불안정한 상태 입니다."</string>
-    
 </resources>
+
+
