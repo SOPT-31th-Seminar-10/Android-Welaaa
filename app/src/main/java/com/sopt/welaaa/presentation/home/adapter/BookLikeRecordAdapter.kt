@@ -7,19 +7,25 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.sopt.welaaa.data.model.ResponseBookDto
 import com.sopt.welaaa.databinding.ItemLikeRecordBinding
+import com.sopt.welaaa.presentation.home.OnBookLikeRecordItemClickListener
 
 class BookLikeRecordAdapter :
     ListAdapter<ResponseBookDto.Data, BookLikeRecordAdapter.ItemViewHolder>(Differ()) {
+    private lateinit var onBookLikeRecordItemClickListener: OnBookLikeRecordItemClickListener
 
+    fun setOnBookLikeRecordItemClickListener(onBookLikeRecordItemClickListener: OnBookLikeRecordItemClickListener) {
+        this.onBookLikeRecordItemClickListener = onBookLikeRecordItemClickListener
+    }
 
     inner class ItemViewHolder(val binding: ItemLikeRecordBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
 
         fun bind(bookList: ResponseBookDto.Data) {
-
             binding.homeBook = bookList
-
+            binding.clItemLikeCount.setOnClickListener {
+                onBookLikeRecordItemClickListener.onItemClick()
+            }
         }
     }
 
